@@ -1,56 +1,40 @@
 {
-  "name": "unocss-preset-daisyui",
-  "version": "0.0.3",
-  "author": "",
-  "license": "MIT",
-  "description": "UnoCSS preset for daisyUI",
-  "homepage": "https://github.com/Super-Lollipop/unocss-preset-daisyui",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Super-Lollipop/unocss-preset-daisyui"
-  },
-  "bugs": {
-    "url": "https://github.com/Super-Lollipop/unocss-preset-daisyui/issues"
-  },
-  "keywords": [
-    "unocss",
-    "daisyui",
-    "unocss-preset"
-  ],
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    }
-  },
-  "scripts": {
-    "build": "unbuild",
-    "stub": "unbuild --stub",
-    "play": "npm -C playground run dev",
-    "release": "bumpp && pnpm build && pnpm publish"
-  },
-  "devDependencies": {
-    "@antfu/eslint-config": "^2.3.4",
-    "@types/node": "^20.10.3",
-    "@types/postcss-js": "^4.0.4",
-    "bumpp": "^9.2.0",
-    "eslint": "^8.55.0",
-    "typescript": "^5.3.2",
-    "unbuild": "^2.0.0"
-  },
-  "peerDependencies": {
-    "daisyui": ">=4.0.0",
-    "unocss": ">=0.58.0"
-  },
-  "dependencies": {
-    "autoprefixer": "^10.4.16",
-    "unocss-preset-component": "^0.0.4"
-  }
+	"name": "unocss-preset-daisy",
+	"version": "8.0.0",
+	"description": "UnoCSS preset for daisyUI",
+	"scripts": {
+		"build": "vite build demo",
+		"prepare": "tsc",
+		"preview": "vite preview demo --host",
+		"start": "vite demo --host"
+	},
+	"repository": "kidonng/unocss-preset-daisy",
+	"license": "MIT",
+	"author": "Kid <hi@xuann.wang> (https://xuann.wang/)",
+	"type": "module",
+	"exports": "./index.js",
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"dependencies": {
+		"autoprefixer": "^10.4.15",
+		"camelcase": "^8.0.0",
+		"parsel-js": "^1.1.2",
+		"postcss": "^8.4.29",
+		"postcss-js": "^4.0.1"
+	},
+	"peerDependencies": {
+		"daisyui": "^4.4.23",
+		"unocss": ">0.58.1"
+	},
+	"devDependencies": {
+		"@iconify-json/octicon": "^1.1.48",
+		"@sindresorhus/tsconfig": "^5.0.0",
+		"@types/postcss-js": "^4.0.1",
+		"@unocss/reset": "^0.58.2",
+		"typescript": "^5.2.2",
+		"vite": "^5.0.10",
+		"xo": "^0.56.0"
+	}
 }
